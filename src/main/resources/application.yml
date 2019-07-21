@@ -1,0 +1,9 @@
+spring:
+profiles.active: development
+
+---
+spring:
+profiles: development
+server:
+   port: 8888
+   contextPath: /personelMoneyManager
