@@ -6,4 +6,3 @@ spring:
 profiles: development
 server:
    port: 8888
-   contextPath: /personelMoneyManager

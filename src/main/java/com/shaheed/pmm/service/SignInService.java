@@ -1,7 +1,9 @@
 /**
  * @author shaheed
  * */
-package com.shaheed.pmm.web.service;
+package com.shaheed.pmm.service;
+
+import com.shaheed.pmm.request.BasicRequest;
 
 public interface SignInService {
 
@@ -11,5 +13,5 @@ public interface SignInService {
 	 * @param password
 	 * @return 
 	 * */
-	public boolean validateUser(String userName, String password);
+	public boolean validateUser(BasicRequest basicRequest);
 }

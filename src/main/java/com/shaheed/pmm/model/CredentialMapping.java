@@ -1,7 +1,7 @@
 /**
  * @author shaheed
  * */
-package com.shaheed.pmm.web.model;
+package com.shaheed.pmm.model;
 
 import lombok.Getter;
 import lombok.Setter;

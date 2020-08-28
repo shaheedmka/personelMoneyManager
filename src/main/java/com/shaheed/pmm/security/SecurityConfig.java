@@ -1,4 +1,4 @@
-package com.shaheed.pmm.web.security;
+package com.shaheed.pmm.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,8 +11,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
  
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-            .anyRequest()
+        http.authorizeRequests().antMatchers("/", "/js/**", "/css/**")
             .permitAll()
             .and().csrf().disable();
     }
