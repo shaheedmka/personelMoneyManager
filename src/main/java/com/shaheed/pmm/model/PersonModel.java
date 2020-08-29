@@ -32,10 +32,11 @@ public class PersonModel extends CommonDatesModel{
 	@SequenceGenerator(
 	         name = "person_person_id_seq",
 	         sequenceName = "person_person_id_seq",
-	         initialValue = 10)
+	         initialValue = 1000)
 	@Id
 	@Setter
 	@Getter
+	@Column (name = "personid", nullable = false, unique = true)
 	private Long personId;
 	
 	@Column(name = "username", nullable = false, unique = true)
@@ -64,7 +65,7 @@ public class PersonModel extends CommonDatesModel{
 	
 	@Column(name = "mobile_number", nullable = false, unique = true)
 	@NotBlank
-	@Size(min = 10, max = 14)
+	@Size(min = 10, max = 20)
 	@Setter
 	@Getter
 	private String mobileNumber;
@@ -74,7 +75,7 @@ public class PersonModel extends CommonDatesModel{
 	@Getter
 	private String address;
 	
-	@Column(name = "is_active")
+	@Column(name = "is_active", nullable = false)
 	@Setter
 	@Getter
 	private Boolean isActive;
